@@ -1,3 +1,94 @@
+//############################
+//VARIABLES & MIXINS
+//############################
+//----------------------------
+//colors
+//----------------------------
+$pink: #F2D1C8;
+$lightgreen: #D1D9CC;
+$darkgreen: #95A693;
+$tomette: #B36458;
+$black: #160300;
+$white: #FFF5F3;
+
+//----------------------------
+//fonts
+//----------------------------
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+$berkshire: "Berkshire Swash", cursive;
+$lora: "lora", serif;
+$lato: "lato", sans-serif;
+
+//----------------------------
+//mixins
+//----------------------------
+@mixin tablet_min_width {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop_min_width {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+//############################
+//STYLING
+//############################
+
+//----------------------------
+//typography
+//----------------------------
+
+h1 {
+    font-family: $berkshire;
+    font-size: 1.2rem;
+}
+
+h2 {
+  font-family: $lora;
+}
+p,
+a {
+    font-family: $lato;
+    font-size: 1rem;
+}
+
+
+//----------------------------
+// background frame
+//----------------------------
+body {
+  background-color: $white;
+}
+
+.background-shadow {
+  background-color: $lightgreen;
+  border: 1px solid $black;
+  margin: 0.5rem 2rem 2.5rem 0.5rem;
+}
+
+.background-container {
+  background-color: $pink;
+  border: 1px solid $black;
+  margin: 0.5rem -1rem -1rem 0.7rem;
+  padding: 0.5rem;
+}
+//----------------------------
+//language fonctionality 
+//!add button styling below
+//----------------------------
+.fr {
+  display: none;
+}
+
+//----------------------------
+//portrait
+//----------------------------
 .circle-shape {
   position: relative;
   margin: 0 auto;
@@ -17,61 +108,44 @@ img {
     max-width: 50px;
 }
 
+//----------------------------
+//list of links
+//----------------------------
+ul {
+  list-style: none;
+  padding-left: 0rem;
+}
 
-//VARIABLES & MIXINS
+li {
+  padding: 0.3rem;
+  button {
+    background-color: $white;
+    border: 1px solid $black;
+  }
 
-//colors
-
-$pink: #F2D1C8;
-$lightgreen: #D1D9CC;
-$darkgreen: #95A693;
-$tomette: #B36458;
-$black: #160300;
-$white: #FFF5F3;
-
-//fonts
-
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+}
 
 
-$berkshire: "Berkshire Swash", cursive;
-$lora: "lora", serif;
-$lato: "lato", sans-serif;;
+//----------------------------
+//navigation icons
+//----------------------------
 
-//mixins
-@mixin tablet_min_width {
-  @media screen and (min-width: 768px) {
-    @content;
+nav {
+  img {
+    max-width: 24px;
   }
 }
 
-@mixin desktop_min_width {
-  @media screen and (min-width: 1024px) {
-    @content;
-  }
-}
+//----------------------------
+//footer
+//----------------------------
 
-//########
-//STYLING
-
-//base
-.fr {
-  display: none;
-}
-
-h1 {
-    font-family: $berkshire;
-}
-
-h2,
-p,
-a {
+footer {
+  border-top: 1px solid $black;
+  text-align: center;
+  p,
+  a {
     font-family: $lora;
+    font-size: 0.9rem;
+  }
 }
-
-.link-description {
-    font-family: $lato;
-}
-
-
-

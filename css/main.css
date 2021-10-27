@@ -1,4 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-family: "lora", serif;
+}
+
+p,
+a {
+  font-family: "lato", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  background-color: #FFF5F3;
+}
+
+.background-shadow {
+  background-color: #D1D9CC;
+  border: 1px solid #160300;
+  margin: 0.5rem 2rem 2.5rem 0.5rem;
+}
+
+.background-container {
+  background-color: #F2D1C8;
+  border: 1px solid #160300;
+  margin: 0.5rem -1rem -1rem 0.7rem;
+  padding: 0.5rem;
+}
+
+.fr {
+  display: none;
+}
+
 .circle-shape {
   position: relative;
   margin: 0 auto;
@@ -18,21 +54,32 @@ img {
   max-width: 50px;
 }
 
-.fr {
-  display: none;
+ul {
+  list-style: none;
+  padding-left: 0rem;
 }
 
-h1 {
-  font-family: "Berkshire Swash", cursive;
+li {
+  padding: 0.3rem;
 }
 
-h2,
-p,
-a {
+li button {
+  background-color: #FFF5F3;
+  border: 1px solid #160300;
+}
+
+nav img {
+  max-width: 24px;
+}
+
+footer {
+  border-top: 1px solid #160300;
+  text-align: center;
+}
+
+footer p,
+footer a {
   font-family: "lora", serif;
-}
-
-.link-description {
-  font-family: "lato", sans-serif;
+  font-size: 0.9rem;
 }
 /*# sourceMappingURL=main.css.map */
