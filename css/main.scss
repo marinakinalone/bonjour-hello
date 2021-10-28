@@ -67,7 +67,7 @@ body {
 }
 
 .background-shadow {
-  background-color: $lightgreen;
+  background-color: $darkgreen;
   border: 1px solid $black;
   margin: 0.5rem 2rem 2.5rem 0.5rem;
 }
@@ -76,7 +76,7 @@ body {
   background-color: $pink;
   border: 1px solid $black;
   margin: 0.5rem -1rem -1rem 0.7rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
 }
 //----------------------------
 //language fonctionality 
@@ -86,30 +86,46 @@ body {
   display: none;
 }
 
+#btn-lang {
+  margin-bottom: 0.5rem;
+  margin-right: -0.5rem;
+  background-color: $black;
+  color: $white;
+  border: none;
+  text-decoration: underline;
+  padding: 0.5rem 0.8rem;
+  font-family: $lora;
+  font-size: 0.8rem;
+  float: right;
+}
 //----------------------------
 //portrait
 //----------------------------
 .circle-shape {
-  position: relative;
-  margin: 0 auto;
+  border: 1px solid $black;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  background-color: pink;
+  width: 140px;
+  height: 140px;
+  background-color: $lightgreen;
+  overflow: hidden;
+  margin-left: 0.3rem;
+  margin-bottom: 1rem;
 }
 
 #portrait {
-  display: inline;
-  width: 50px;
-  margin-top: 15px;
+  width: 140px;
 }
 
-img {
-    max-width: 50px;
+//----------------------------
+//name & introductory text
+//----------------------------
+.intro {
+  margin: 0.3rem;
 }
 
 //----------------------------
 //list of links
+//?suggestion: add a shadow to button to make it more stand out
 //----------------------------
 ul {
   list-style: none;
@@ -121,8 +137,15 @@ li {
   button {
     background-color: $white;
     border: 1px solid $black;
+    text-align: left;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin-top: 0rem;
+    }
   }
-
 }
 
 
@@ -131,8 +154,10 @@ li {
 //----------------------------
 
 nav {
+  margin-left: 0.5rem;
   img {
     max-width: 24px;
+    padding-right: 0.5rem;
   }
 }
 
