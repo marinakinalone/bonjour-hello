@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 h1 {
-  font-family: "Berkshire Swash", cursive;
-  font-size: 1.2rem;
+  font-family: "lora", serif;
+  font-size: 1.15rem;
 }
 
 h2 {
@@ -11,7 +11,8 @@ h2 {
 p,
 a {
   font-family: "lato", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: #160300;
 }
 
 body {
@@ -24,11 +25,42 @@ body {
   margin: 0.5rem 2rem 2.5rem 0.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .background-shadow {
+    margin: 1.5rem 3rem 3.5rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .background-shadow {
+    margin: 0.5rem 12rem 2.5rem 10.5rem;
+  }
+}
+
 .background-container {
   background-color: #F2D1C8;
   border: 1px solid #160300;
   margin: 0.5rem -1rem -1rem 0.7rem;
   padding: 0.5rem 0.5rem 2rem 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .background-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    min-height: 80vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .background-container {
+    margin: 0.8rem -1rem -1rem 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
 .fr {
@@ -46,6 +78,30 @@ body {
   font-family: "lora", serif;
   font-size: 0.8rem;
   float: right;
+  cursor: pointer;
+}
+
+#btn-lang:hover {
+  color: #D1D9CC;
+}
+
+#btn-lang:focus {
+  color: #160300;
+  background-color: #95A693;
+  outline: 1px solid black;
+}
+
+@media screen and (min-width: 768px) {
+  #btn-lang {
+    margin-right: -3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #btn-lang {
+    margin-top: 1rem;
+    margin-right: -5rem;
+  }
 }
 
 .circle-shape {
@@ -57,10 +113,32 @@ body {
   overflow: hidden;
   margin-left: 0.3rem;
   margin-bottom: 1rem;
+  -webkit-box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06), 10px 10px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06), 10px 10px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .circle-shape {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .circle-shape {
+    margin-top: 0.5rem;
+    width: 120px;
+    height: 120px;
+  }
 }
 
 #portrait {
   width: 140px;
+}
+
+@media screen and (min-width: 1024px) {
+  #portrait {
+    width: 120px;
+  }
 }
 
 .intro {
@@ -77,10 +155,18 @@ li {
 }
 
 li button {
+  min-width: 100%;
   background-color: #FFF5F3;
   border: 1px solid #160300;
   text-align: left;
   padding: 0.5rem 0.5rem 0 0.5rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06), 10px 10px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06), 10px 10px 16px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.4s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.4s;
+  transition: transform 0.3s, box-shadow 0.4s;
+  transition: transform 0.3s, box-shadow 0.4s, -webkit-transform 0.3s, -webkit-box-shadow 0.4s;
 }
 
 li button h2 {
@@ -89,6 +175,23 @@ li button h2 {
 
 li button p {
   margin-top: 0rem;
+}
+
+li button:hover {
+  background-color: #D1D9CC;
+  -webkit-box-shadow: -6px -6px 0px 0px #160300;
+          box-shadow: -6px -6px 0px 0px #160300;
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+}
+
+li button:focus {
+  background-color: #D1D9CC;
+  -webkit-box-shadow: -6px -6px 0px 0px #160300;
+          box-shadow: -6px -6px 0px 0px #160300;
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+  outline: 1px solid #B36458;
 }
 
 nav {
@@ -109,5 +212,33 @@ footer p,
 footer a {
   font-family: "lora", serif;
   font-size: 0.9rem;
+}
+
+footer a {
+  color: #160300;
+}
+
+footer a:hover {
+  color: #B36458;
+}
+
+footer a:focus {
+  outline: 1px dashed #B36458;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer p,
+  footer a {
+    font-family: "lora", serif;
+    font-size: 0.8rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
