@@ -96,38 +96,38 @@ $julia: "JuliaMono-Regular", monospace;
   display: none;
 }
 
-// #btn-lang {
-//   margin-bottom: 0.5rem;
-//   margin-right: -0.5rem;
-//   background-color: $black;
-//   color: $white;
-//   border: none;
-//   text-decoration: underline;
-//   padding: 0.5rem 0.8rem;
-//   font-family: $lora;
-//   font-size: 0.8rem;
-//   float: right;
-//   cursor: pointer;
-//   &:hover {
-//     color: $lightgreen;
-//   }
-//   &:focus {
-//     color: $black;
-//     background-color: $darkgreen;
-//     outline: 1px solid black;
-//   }
-//   @include tablet_min_width {
-//     margin-right: -3rem;
-//   }
-//   @include desktop_min_width {
-//     margin-top: 1rem;
-//     margin-right: -5rem;
-//   }
-// }
+.button__language {
+  margin-bottom: 0.5rem;
+  margin-right: -0.5rem;
+  background-color: $black;
+  color: $white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.6rem;
+  float: right;
+  cursor: pointer;
+  // &:hover {
+  //   color: $lightgreen;
+  // }
+  // &:focus {
+  //   color: $black;
+  //   background-color: $darkgreen;
+  //   outline: 1px solid black;
+  // }
+  // @include tablet_min_width {
+  //   margin-right: -3rem;
+  // }
+  // @include desktop_min_width {
+  //   margin-top: 1rem;
+  //   margin-right: -5rem;
+  // }
+}
 
 //----------------------------
 //portrait
 //----------------------------
+
+//?impression d'un trou dans la feuille ? (inner shadow ??)
 .circle-shape {
   border: $border;
   border-radius: 50%;
@@ -135,7 +135,7 @@ $julia: "JuliaMono-Regular", monospace;
   height: 140px;
   background-color: $green;
   overflow: hidden;
-  margin-left: 0.3rem;
+  margin-left: 0.5rem;
   margin-bottom: 1rem;
   box-shadow:
   0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
@@ -161,17 +161,47 @@ $julia: "JuliaMono-Regular", monospace;
 //----------------------------
 //name & introductory text
 //----------------------------
-// .intro {
-//   margin: 0.3rem;
-// }
+
+.main {
+  margin: 0.5rem 0.5rem 0.5rem 0.8rem;
+}
+
+.main__title {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.main__description {
+  font-size: 0.9rem;
+}
 
 //----------------------------
 //list of links
 //----------------------------
-// ul {
-//   list-style: none;
-//   padding-left: 0rem;
-// }
+
+.links {
+  padding-left: 0;
+}
+
+.links__link {
+  list-style: none;
+  border: $border;
+  padding: 1rem 0.5rem;
+  margin: 0.5rem;
+}
+
+.link-button {
+  text-decoration: none;
+}
+
+.link__title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.link__description {
+  margin: 0;
+  font-size: 0.8rem;
+}
 
 // li {
 //   padding: 0.3rem;
