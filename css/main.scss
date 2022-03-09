@@ -4,20 +4,23 @@
 //----------------------------
 //colors
 //----------------------------
-$pink: #F2D1C8;
-$lightgreen: #D1D9CC;
-$darkgreen: #95A693;
-$tomette: #B36458;
 $black: #160300;
-$white: #FFF5F3;
+$white: #FFFFFF;
+$pink: #FFE8E2;
+$green: #F6FFF2;
+$highlight: #FF00EB;
+$border: 1px solid $black;
 
 //----------------------------
 //fonts
 //----------------------------
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
-$lora: "lora", serif;
-$lato: "lato", sans-serif;
+@font-face {
+  font-family: JuliaMono-Regular;
+  src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2");
+}
+
+$julia: "JuliaMono-Regular", monospace;
 
 //----------------------------
 //mixins
@@ -42,59 +45,49 @@ $lato: "lato", sans-serif;
 //typography
 //----------------------------
 
-h1 {
-    font-family: $lora;
-    font-size: 1.15rem;
-}
-
-h2 {
-  font-family: $lora;
-}
-p,
-a {
-    font-family: $lato;
-    font-size: 0.9rem;
-    color: $black;
+.page, button, a {
+  font-family: $julia;
+  color: $black;
 }
 
 //----------------------------
 // background frame
 //----------------------------
-body {
-  background-color: $white;
- 
-}
 
-.background-shadow {
-  background-color: $darkgreen;
-  border: 1px solid $black;
-  margin: 0.5rem 2rem 2.5rem 0.5rem;
-  @include tablet_min_width {
-    margin: 1.5rem 3rem 3.5rem 1.5rem;
-  }
-  @include desktop_min_width {
-    margin: 0.5rem 12rem 2.5rem 10.5rem;
-  }
-}
-
-.background-container {
+.page {
   background-color: $pink;
-  border: 1px solid $black;
+}
+
+.background__shadow {
+  background-color: $green;
+  border: $border;
+  margin: 1rem 1.5rem 2rem 0.5rem;
+  // @include tablet_min_width {
+  //   margin: 10%;
+  // }
+  // @include desktop_min_width {
+  //   margin: 15%;
+  // }
+}
+
+.background__container {
+  background-color: $white;
+  border: $border;
   margin: 0.5rem -1rem -1rem 0.7rem;
-  padding: 0.5rem 0.5rem 2rem 0.5rem;
-  @include tablet_min_width {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 2rem;
-    min-height: 80vh;
-  }
-  @include desktop_min_width {
-    margin: 0.8rem -1rem -1rem 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  // @include tablet_min_width {
+  //   padding-left: 3rem;
+  //   padding-right: 3rem;
+  //   padding-top: 2rem;
+  //   min-height: 80vh;
+  // }
+  // @include desktop_min_width {
+  //   margin: 0.8rem -1rem -1rem 1rem;
+  //   padding-top: 0.5rem;
+  //   padding-bottom: 2rem;
+  //   padding-left: 5rem;
+  //   padding-right: 5rem;
+  // }
 }
 //----------------------------
 //language fonctionality 
@@ -103,43 +96,44 @@ body {
   display: none;
 }
 
-#btn-lang {
-  margin-bottom: 0.5rem;
-  margin-right: -0.5rem;
-  background-color: $black;
-  color: $white;
-  border: none;
-  text-decoration: underline;
-  padding: 0.5rem 0.8rem;
-  font-family: $lora;
-  font-size: 0.8rem;
-  float: right;
-  cursor: pointer;
-  &:hover {
-    color: $lightgreen;
-  }
-  &:focus {
-    color: $black;
-    background-color: $darkgreen;
-    outline: 1px solid black;
-  }
-  @include tablet_min_width {
-    margin-right: -3rem;
-  }
-  @include desktop_min_width {
-    margin-top: 1rem;
-    margin-right: -5rem;
-  }
-}
+// #btn-lang {
+//   margin-bottom: 0.5rem;
+//   margin-right: -0.5rem;
+//   background-color: $black;
+//   color: $white;
+//   border: none;
+//   text-decoration: underline;
+//   padding: 0.5rem 0.8rem;
+//   font-family: $lora;
+//   font-size: 0.8rem;
+//   float: right;
+//   cursor: pointer;
+//   &:hover {
+//     color: $lightgreen;
+//   }
+//   &:focus {
+//     color: $black;
+//     background-color: $darkgreen;
+//     outline: 1px solid black;
+//   }
+//   @include tablet_min_width {
+//     margin-right: -3rem;
+//   }
+//   @include desktop_min_width {
+//     margin-top: 1rem;
+//     margin-right: -5rem;
+//   }
+// }
+
 //----------------------------
 //portrait
 //----------------------------
 .circle-shape {
-  border: 1px solid $black;
+  border: $border;
   border-radius: 50%;
   width: 140px;
   height: 140px;
-  background-color: $lightgreen;
+  background-color: $green;
   overflow: hidden;
   margin-left: 0.3rem;
   margin-bottom: 1rem;
@@ -147,83 +141,83 @@ body {
   0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
   2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
   10px 10px 16px rgba(0, 0, 0, 0.1);
-  @include tablet_min_width {
-    margin-top: 3rem;
-  }
-  @include desktop_min_width {
-    margin-top: 0.5rem;
-    width: 120px;
-    height: 120px;
-  }
+  // @include tablet_min_width {
+  //   margin-top: 3rem;
+  // }
+  // @include desktop_min_width {
+  //   margin-top: 0.5rem;
+  //   width: 120px;
+  //   height: 120px;
+  // }
 }
 
-#portrait {
+.portrait__drawing{
   width: 140px;
-  @include desktop_min_width {
-    width: 120px;
-  }
+  // @include desktop_min_width {
+  //   width: 120px;
+  // }
 }
 
 //----------------------------
 //name & introductory text
 //----------------------------
-.intro {
-  margin: 0.3rem;
-}
+// .intro {
+//   margin: 0.3rem;
+// }
 
 //----------------------------
 //list of links
 //----------------------------
-ul {
-  list-style: none;
-  padding-left: 0rem;
-}
+// ul {
+//   list-style: none;
+//   padding-left: 0rem;
+// }
 
-li {
-  padding: 0.3rem;
-  button {
-    min-width: 100%;
-    background-color: $white;
-    border: 1px solid $black;
-    text-align: left;
-    padding: 0.5rem 0.5rem 0 0.5rem;
-    cursor: pointer;
-    box-shadow:
-    0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
-    2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
-    10px 10px 16px rgba(0, 0, 0, 0.1);
-    h2 {
-      margin: 0;
-    }
-    p {
-      margin-top: 0rem;
-    }
-    transition: transform 0.3s, box-shadow 0.4s;
-    &:hover {
-      background-color: $lightgreen;
-      box-shadow: -6px -6px 0px 0px $black;
-      transform: translate(4px, 4px);
-    }
-    &:focus {
-      background-color: $lightgreen;
-      box-shadow: -6px -6px 0px 0px $black;
-      transform: translate(4px, 4px);
-      outline: 1px solid $tomette;
-    }
+// li {
+//   padding: 0.3rem;
+//   button {
+//     min-width: 100%;
+//     background-color: $white;
+//     border: 1px solid $black;
+//     text-align: left;
+//     padding: 0.5rem 0.5rem 0 0.5rem;
+//     cursor: pointer;
+//     box-shadow:
+//     0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
+//     2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
+//     10px 10px 16px rgba(0, 0, 0, 0.1);
+//     h2 {
+//       margin: 0;
+//     }
+//     p {
+//       margin-top: 0rem;
+//     }
+//     transition: transform 0.3s, box-shadow 0.4s;
+//     &:hover {
+//       background-color: $lightgreen;
+//       box-shadow: -6px -6px 0px 0px $black;
+//       transform: translate(4px, 4px);
+//     }
+//     &:focus {
+//       background-color: $lightgreen;
+//       box-shadow: -6px -6px 0px 0px $black;
+//       transform: translate(4px, 4px);
+//       outline: 1px solid $tomette;
+//     }
    
-  }
-}
+//   }
+// }
 
 
 //----------------------------
-//navigation icons
+//navigation
 //----------------------------
 
-nav {
+.navigation {
   margin-left: 0.5rem;
-  img {
+  .navigation__icon {
     max-width: 24px;
-    padding-right: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -231,34 +225,19 @@ nav {
 //footer
 //----------------------------
 
-footer {
-  border-top: 1px solid $black;
+.footer {
+  border-top: $border;
   text-align: center;
-  p,
-  a {
-    font-family: $lora;
-    font-size: 0.9rem;
-  }
-  a {
-    color: $black;
-    &:hover {
-      color: $tomette;
-    }
-    &:focus {
-      outline: 1px dashed $tomette;
-    }
-  }
-  @include tablet_min_width {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  @include desktop_min_width {
-    p,
-    a {
-      font-family: $lora;
-      font-size: 0.8rem;
-    }
-  }
-  
+  // @include tablet_min_width {
+  //   position: fixed;
+  //   bottom: 0;
+  //   width: 100%;
+  // }
+  // @include desktop_min_width {
+  //   p,
+  //   a {
+  //     font-family: $lora;
+  //     font-size: 0.8rem;
+  //   }
+  // }
 }
