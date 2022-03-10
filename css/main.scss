@@ -32,7 +32,7 @@ $julia: "JuliaMono-Regular", monospace;
 }
 
 @mixin tablet_min_height {
-  @media screen and (min-height: 900px) {
+  @media screen and (min-height: 850px) {
     @content;
   }
 }
@@ -42,7 +42,6 @@ $julia: "JuliaMono-Regular", monospace;
     @content;
   }
 }
-
 
 //############################
 //STYLING
@@ -55,6 +54,16 @@ $julia: "JuliaMono-Regular", monospace;
 .page, button, a {
   font-family: $julia;
   color: $black;
+}
+
+a {
+  &:hover {
+    color: $highlight;
+  }
+  &:focus {
+    color: $highlight;
+    outline: 2px dashed $highlight;
+  }
 }
 
 //----------------------------
@@ -70,7 +79,7 @@ $julia: "JuliaMono-Regular", monospace;
   border: $border;
   margin: 1rem 1.5rem 2rem 0.5rem;
   @include tablet_min_width {
-    margin: 2% 25% 0% 25%;
+    margin: 2% 25% 5% 25%;
   }
   @include tablet_min_height-bis {
     margin-top: 15%;
@@ -96,26 +105,21 @@ $julia: "JuliaMono-Regular", monospace;
   margin-right: -0.5rem;
   background-color: $black;
   color: $white;
-  border: none;
+  border: $border;
   padding: 0.5rem 0.8rem;
   font-size: 0.6rem;
   float: right;
   cursor: pointer;
-  // &:hover {
-  //   color: $lightgreen;
-  // }
-  // &:focus {
-  //   color: $black;
-  //   background-color: $darkgreen;
-  //   outline: 1px solid black;
-  // }
-  // @include tablet_min_width {
-  //   margin-right: -3rem;
-  // }
-  // @include desktop_min_width {
-  //   margin-top: 1rem;
-  //   margin-right: -5rem;
-  // }
+  &:hover {
+    color: $black;
+    background-color: $green;
+  }
+  &:focus {
+    color: $highlight;
+    background-color: $green;
+    border-color: $highlight;
+    outline: 1px dashed $highlight;
+  }
 }
 
 //----------------------------

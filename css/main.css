@@ -8,6 +8,15 @@
   color: #160300;
 }
 
+a:hover {
+  color: #FF00EB;
+}
+
+a:focus {
+  color: #FF00EB;
+  outline: 2px dashed #FF00EB;
+}
+
 .page {
   background-color: #FFE8E2;
 }
@@ -20,7 +29,7 @@
 
 @media screen and (min-width: 700px) {
   .background__shadow {
-    margin: 2% 25% 0% 25%;
+    margin: 2% 25% 5% 25%;
   }
 }
 
@@ -46,11 +55,23 @@
   margin-right: -0.5rem;
   background-color: #160300;
   color: #FFFFFF;
-  border: none;
+  border: 1px solid #160300;
   padding: 0.5rem 0.8rem;
   font-size: 0.6rem;
   float: right;
   cursor: pointer;
+}
+
+.button__language:hover {
+  color: #160300;
+  background-color: #F6FFF2;
+}
+
+.button__language:focus {
+  color: #FF00EB;
+  background-color: #F6FFF2;
+  border-color: #FF00EB;
+  outline: 1px dashed #FF00EB;
 }
 
 .circle-shape {
@@ -123,7 +144,7 @@
   text-align: center;
 }
 
-@media screen and (min-height: 900px) {
+@media screen and (min-height: 850px) {
   .footer {
     position: fixed;
     bottom: 0;
