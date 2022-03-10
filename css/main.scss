@@ -4,32 +4,41 @@
 //----------------------------
 //colors
 //----------------------------
-$pink: #F2D1C8;
-$lightgreen: #D1D9CC;
-$darkgreen: #95A693;
-$tomette: #B36458;
 $black: #160300;
-$white: #FFF5F3;
+$white: #FFFFFF;
+$pink: #FFE8E2;
+$green: #F6FFF2;
+$highlight: #FF00EB;
+$border: 1px solid $black;
 
 //----------------------------
 //fonts
 //----------------------------
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
-$lora: "lora", serif;
-$lato: "lato", sans-serif;
+@font-face {
+  font-family: JuliaMono-Regular;
+  src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2");
+}
+
+$julia: "JuliaMono-Regular", monospace;
 
 //----------------------------
 //mixins
 //----------------------------
 @mixin tablet_min_width {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 700px) {
     @content;
   }
 }
 
-@mixin desktop_min_width {
-  @media screen and (min-width: 1024px) {
+@mixin tablet_min_height {
+  @media screen and (min-height: 850px) {
+    @content;
+  }
+}
+
+@mixin tablet_min_height-bis {
+  @media screen and (min-height: 900px) and (max-width: 900px) {
     @content;
   }
 }
@@ -42,60 +51,48 @@ $lato: "lato", sans-serif;
 //typography
 //----------------------------
 
-h1 {
-    font-family: $lora;
-    font-size: 1.15rem;
+.page, button, a {
+  font-family: $julia;
+  color: $black;
 }
 
-h2 {
-  font-family: $lora;
-}
-p,
 a {
-    font-family: $lato;
-    font-size: 0.9rem;
-    color: $black;
+  &:hover {
+    color: $highlight;
+  }
+  &:focus {
+    color: $highlight;
+    outline: 2px dashed $highlight;
+  }
 }
 
 //----------------------------
 // background frame
 //----------------------------
-body {
-  background-color: $white;
- 
-}
 
-.background-shadow {
-  background-color: $darkgreen;
-  border: 1px solid $black;
-  margin: 0.5rem 2rem 2.5rem 0.5rem;
-  @include tablet_min_width {
-    margin: 1.5rem 3rem 3.5rem 1.5rem;
-  }
-  @include desktop_min_width {
-    margin: 0.5rem 12rem 2.5rem 10.5rem;
-  }
-}
-
-.background-container {
+.page {
   background-color: $pink;
-  border: 1px solid $black;
-  margin: 0.5rem -1rem -1rem 0.7rem;
-  padding: 0.5rem 0.5rem 2rem 0.5rem;
+}
+
+.background__shadow {
+  background-color: $green;
+  border: $border;
+  margin: 1rem 1.5rem 2rem 0.5rem;
   @include tablet_min_width {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 2rem;
-    min-height: 80vh;
+    margin: 2% 25% 5% 25%;
   }
-  @include desktop_min_width {
-    margin: 0.8rem -1rem -1rem 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+  @include tablet_min_height-bis {
+    margin-top: 15%;
   }
 }
+
+.background__container {
+  background-color: $white;
+  border: $border;
+  margin: 0.5rem -1rem -1rem 0.7rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
 //----------------------------
 //language fonctionality 
 //----------------------------
@@ -103,162 +100,145 @@ body {
   display: none;
 }
 
-#btn-lang {
+.button__language {
   margin-bottom: 0.5rem;
   margin-right: -0.5rem;
   background-color: $black;
   color: $white;
-  border: none;
-  text-decoration: underline;
+  border: $border;
   padding: 0.5rem 0.8rem;
-  font-family: $lora;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   float: right;
   cursor: pointer;
   &:hover {
-    color: $lightgreen;
+    color: $black;
+    background-color: $green;
   }
   &:focus {
-    color: $black;
-    background-color: $darkgreen;
-    outline: 1px solid black;
-  }
-  @include tablet_min_width {
-    margin-right: -3rem;
-  }
-  @include desktop_min_width {
-    margin-top: 1rem;
-    margin-right: -5rem;
+    color: $highlight;
+    background-color: $green;
+    border-color: $highlight;
+    outline: 1px dashed $highlight;
   }
 }
+
 //----------------------------
 //portrait
 //----------------------------
+
+//?impression d'un trou dans la feuille ? (inner shadow ??)
 .circle-shape {
-  border: 1px solid $black;
+  border: $border;
   border-radius: 50%;
   width: 140px;
   height: 140px;
-  background-color: $lightgreen;
+  background-color: $green;
   overflow: hidden;
-  margin-left: 0.3rem;
+  margin-left: 0.5rem;
   margin-bottom: 1rem;
   box-shadow:
   0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
   2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
   10px 10px 16px rgba(0, 0, 0, 0.1);
-  @include tablet_min_width {
-    margin-top: 3rem;
-  }
-  @include desktop_min_width {
-    margin-top: 0.5rem;
-    width: 120px;
-    height: 120px;
-  }
 }
 
-#portrait {
+.portrait__drawing{
   width: 140px;
-  @include desktop_min_width {
-    width: 120px;
-  }
 }
 
 //----------------------------
 //name & introductory text
 //----------------------------
-.intro {
-  margin: 0.3rem;
+
+.main {
+  margin: 0.5rem 0.5rem 0.5rem 0.8rem;
+}
+
+.main__title {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.main__description {
+  font-size: 0.9rem;
 }
 
 //----------------------------
 //list of links
 //----------------------------
-ul {
+
+.links {
+  padding-left: 0;
+}
+
+.links__link {
   list-style: none;
-  padding-left: 0rem;
-}
-
-li {
-  padding: 0.3rem;
-  button {
-    min-width: 100%;
-    background-color: $white;
-    border: 1px solid $black;
-    text-align: left;
-    padding: 0.5rem 0.5rem 0 0.5rem;
-    cursor: pointer;
-    box-shadow:
-    0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
-    2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
-    10px 10px 16px rgba(0, 0, 0, 0.1);
-    h2 {
-      margin: 0;
-    }
-    p {
-      margin-top: 0rem;
-    }
-    transition: transform 0.3s, box-shadow 0.4s;
-    &:hover {
-      background-color: $lightgreen;
-      box-shadow: -6px -6px 0px 0px $black;
-      transform: translate(4px, 4px);
-    }
-    &:focus {
-      background-color: $lightgreen;
-      box-shadow: -6px -6px 0px 0px $black;
-      transform: translate(4px, 4px);
-      outline: 1px solid $tomette;
-    }
-   
+  padding: 1rem 0.5rem;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  cursor: pointer;
+  border: $border;
+  box-shadow:
+  0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
+  2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
+  10px 10px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.4s;
+  &:hover {
+    background-color: $green;
+    box-shadow: -6px -6px 0px 0px $black;
+    transform: translate(4px, 4px);
   }
 }
 
+.link-button {
+  text-decoration: none;
+  &:hover {
+     color: $black;
+  }
+  &:focus {
+    color: $highlight;
+    background-color: $green;
+  }
+}
+
+.link__title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.link__description {
+  margin: 0;
+  font-size: 0.8rem;
+}
 
 //----------------------------
-//navigation icons
+//navigation
 //----------------------------
 
-nav {
+.navigation {
   margin-left: 0.5rem;
-  img {
-    max-width: 24px;
-    padding-right: 0.5rem;
-  }
+}
+.navigation__icon {
+  max-width: 24px;
 }
 
+.navigation__link {
+  padding: 0.7rem 0.2rem 0rem 0.2rem;
+  &:hover {
+    outline: 2px dashed $highlight;
+  }
+  &:focus {
+    outline: 2px dashed $highlight;
+  }
+}
 //----------------------------
 //footer
 //----------------------------
 
-footer {
-  border-top: 1px solid $black;
+.footer {
+  border-top: $border;
   text-align: center;
-  p,
-  a {
-    font-family: $lora;
-    font-size: 0.9rem;
-  }
-  a {
-    color: $black;
-    &:hover {
-      color: $tomette;
-    }
-    &:focus {
-      outline: 1px dashed $tomette;
-    }
-  }
-  @include tablet_min_width {
+  @include tablet_min_height {
     position: fixed;
     bottom: 0;
     width: 100%;
   }
-  @include desktop_min_width {
-    p,
-    a {
-      font-family: $lora;
-      font-size: 0.8rem;
-    }
-  }
-  
 }
