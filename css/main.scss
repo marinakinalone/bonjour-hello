@@ -173,14 +173,31 @@ a {
 
 .links__link {
   list-style: none;
-  border: $border;
   padding: 1rem 0.5rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
   cursor: pointer;
+  border: $border;
+  box-shadow:
+  0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
+  2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
+  10px 10px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.4s;
+  &:hover {
+    background-color: $green;
+    box-shadow: -6px -6px 0px 0px $black;
+    transform: translate(4px, 4px);
+  }
 }
 
 .link-button {
   text-decoration: none;
+  &:hover {
+     color: $black;
+  }
+  &:focus {
+    color: $highlight;
+    background-color: $green;
+  }
 }
 
 .link__title {
@@ -192,48 +209,26 @@ a {
   font-size: 0.8rem;
 }
 
-// li {
-//   padding: 0.3rem;
-//   button {
-//     min-width: 100%;
-//     background-color: $white;
-//     border: 1px solid $black;
-//     text-align: left;
-//     padding: 0.5rem 0.5rem 0 0.5rem;
-//     
-//     box-shadow:
-//     0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
-//     2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
-//     10px 10px 16px rgba(0, 0, 0, 0.1);
-//     transition: transform 0.3s, box-shadow 0.4s;
-//     &:hover {
-//       background-color: $lightgreen;
-//       box-shadow: -6px -6px 0px 0px $black;
-//       transform: translate(4px, 4px);
-//     }
-//     &:focus {
-//       background-color: $lightgreen;
-//       box-shadow: -6px -6px 0px 0px $black;
-//       transform: translate(4px, 4px);
-//       outline: 1px solid $tomette;
-//     }
-   
-//   }
-// }
-
-
 //----------------------------
 //navigation
 //----------------------------
 
 .navigation {
   margin-left: 0.5rem;
-  .navigation__icon {
-    max-width: 24px;
-    margin-right: 0.5rem;
-  }
+}
+.navigation__icon {
+  max-width: 24px;
 }
 
+.navigation__link {
+  padding: 0.7rem 0.2rem 0rem 0.2rem;
+  &:hover {
+    outline: 2px dashed $highlight;
+  }
+  &:focus {
+    outline: 2px dashed $highlight;
+  }
+}
 //----------------------------
 //footer
 //----------------------------
