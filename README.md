@@ -1,6 +1,20 @@
 # Bonjour Hello
 
-A linktree-like landing page for all my associated links to post on social media
+A linktree-like landing page for all my associated links to post on social media.
+### Version 2 - march 2022
+- new design, still focused on accessibility
+- better HTML structure and naming conventions for CSS
+- ...and of course, more confettis!
+
+![wireframe](./design/wireframe_mobile.png) |
+---|
+wireframe for mobile version |
+
+![stylesheet](./design/Stylesheet.png) |
+---|
+Stylesheet |
+
+
 
 ## Built with 
 
@@ -9,8 +23,10 @@ A linktree-like landing page for all my associated links to post on social media
 - [Party.js](https://party.js.org/)
 
 ## What's next to do?
-- see [Notion page](https://www.notion.so/marinakinalone/bonjour-hello-associated-links-in-bio-6df31f381edf4272b84d2af7cd127da2)
 
+On March 2022, I decided to update my portfolio, blog and landing page for personal links with newly acquired knowledge about design and coding.
+
+202203: V.2 has been deployed and I'm pretty much done with this project atm. Next step is to make some improvments to my portfolio :)
 ## Team
 
 [![Marina Kinalone Simonnet](https://avatars.githubusercontent.com/u/63544936?v=3&s=144)](https://github.com/marinakinalone) |
