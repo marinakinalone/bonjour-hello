@@ -14,8 +14,6 @@ wireframe for mobile version |
 ---|
 Stylesheet |
 
-
-
 ## Built with 
 
 - HTML
@@ -23,10 +21,10 @@ Stylesheet |
 - [Party.js](https://party.js.org/)
 
 ## What's next to do?
-
 On March 2022, I decided to update my portfolio, blog and landing page for personal links with newly acquired knowledge about design and coding.
-
 202203: V.2 has been deployed and I'm pretty much done with this project atm. Next step is to make some improvments to my portfolio :)
+## What I have learned from this project
+Keep things simple! Sometimes, the combo HTML+CSS is more than enough...
 ## Team
 
 [![Marina Kinalone Simonnet](https://avatars.githubusercontent.com/u/63544936?v=3&s=144)](https://github.com/marinakinalone) |
