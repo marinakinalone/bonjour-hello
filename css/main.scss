@@ -57,12 +57,9 @@ $julia: "JuliaMono-Regular", monospace;
 }
 
 a {
-  &:hover {
-    color: $highlight;
-  }
+  &:hover,
   &:focus {
     color: $highlight;
-    outline: 2px dashed $highlight;
   }
 }
 
@@ -133,12 +130,13 @@ a {
   height: 140px;
   background-color: $green;
   overflow: hidden;
-  margin-left: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
   margin-bottom: 1rem;
   box-shadow:
   0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
   2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
-  10px 10px 16px rgba(0, 0, 0, 0.1);
+  6px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 .portrait__drawing{
@@ -150,7 +148,7 @@ a {
 //----------------------------
 
 .main {
-  margin: 0.5rem 0.5rem 0.5rem 0.8rem;
+  margin: 0.5rem 2rem 0.5rem 2rem;
 }
 
 .main__title {
@@ -173,13 +171,12 @@ a {
 .links__link {
   list-style: none;
   padding: 1rem 0.5rem;
-  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  margin: 0.5rem 1.5rem 1rem 1.5rem;
   cursor: pointer;
   border: $border;
   box-shadow:
   0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04),
-  2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06),
-  10px 10px 16px rgba(0, 0, 0, 0.1);
+  2.2px 2.2px 6px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s, box-shadow 0.4s;
   &:hover {
     background-color: $green;
@@ -213,7 +210,7 @@ a {
 //----------------------------
 
 .navigation {
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
 }
 .navigation__icon {
   max-width: 24px;
