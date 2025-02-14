@@ -2,7 +2,6 @@
   font-family: JuliaMono-Regular;
   src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2");
 }
-
 .page, button, a {
   font-family: "JuliaMono-Regular", monospace;
   color: #160300;
@@ -21,13 +20,11 @@ a:hover, a:focus {
   border: 1px solid #160300;
   margin: 1rem 1.5rem 2rem 0.5rem;
 }
-
 @media screen and (min-width: 700px) {
   .background__shadow {
     margin: 2% 25% 5% 25%;
   }
 }
-
 @media screen and (min-height: 900px) and (max-width: 900px) {
   .background__shadow {
     margin-top: 15%;
@@ -56,12 +53,10 @@ a:hover, a:focus {
   float: right;
   cursor: pointer;
 }
-
 .button__language:hover {
   color: #160300;
   background-color: #F6FFF2;
 }
-
 .button__language:focus {
   color: #FF00EB;
   background-color: #F6FFF2;
@@ -79,8 +74,7 @@ a:hover, a:focus {
   margin-top: 1rem;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
-  -webkit-box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06), 6px 6px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06), 6px 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 3.6px rgba(0, 0, 0, 0.06), 6px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 .portrait__drawing {
@@ -88,7 +82,7 @@ a:hover, a:focus {
 }
 
 .main {
-  margin: 0.5rem 2rem 0.5rem 2rem;
+  margin: 0.5rem 1rem 0rem 1rem;
 }
 
 .main__title {
@@ -97,7 +91,7 @@ a:hover, a:focus {
 }
 
 .main__description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .links {
@@ -106,34 +100,25 @@ a:hover, a:focus {
 
 .links__link {
   list-style: none;
-  padding: 1rem 0.5rem;
-  margin: 0.5rem 1.5rem 1rem 1.5rem;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
   cursor: pointer;
   border: 1px solid #160300;
-  -webkit-box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 6px rgba(0, 0, 0, 0.06);
-          box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 6px rgba(0, 0, 0, 0.06);
-  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.4s;
-  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.4s;
+  box-shadow: 0.7px 0.7px 1.1px rgba(0, 0, 0, 0.04), 2.2px 2.2px 6px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s, box-shadow 0.4s;
-  transition: transform 0.3s, box-shadow 0.4s, -webkit-transform 0.3s, -webkit-box-shadow 0.4s;
 }
-
 .links__link:hover {
   background-color: #F6FFF2;
-  -webkit-box-shadow: -6px -6px 0px 0px #160300;
-          box-shadow: -6px -6px 0px 0px #160300;
-  -webkit-transform: translate(4px, 4px);
-          transform: translate(4px, 4px);
+  box-shadow: -6px -6px 0px 0px #160300;
+  transform: translate(4px, 4px);
 }
 
 .link-button {
   text-decoration: none;
 }
-
 .link-button:hover {
   color: #160300;
 }
-
 .link-button:focus {
   color: #FF00EB;
   background-color: #F6FFF2;
@@ -141,16 +126,17 @@ a:hover, a:focus {
 
 .link__title {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .link__description {
   margin: 0;
+  padding-top: 0.15rem;
   font-size: 0.8rem;
 }
 
 .navigation {
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
 }
 
 .navigation__icon {
@@ -160,11 +146,9 @@ a:hover, a:focus {
 .navigation__link {
   padding: 0.7rem 0.2rem 0rem 0.2rem;
 }
-
 .navigation__link:hover {
   outline: 2px dashed #FF00EB;
 }
-
 .navigation__link:focus {
   outline: 2px dashed #FF00EB;
 }
@@ -172,13 +156,12 @@ a:hover, a:focus {
 .footer {
   border-top: 1px solid #160300;
   text-align: center;
+  font-size: 0.8rem;
 }
-
 @media screen and (min-height: 850px) {
   .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

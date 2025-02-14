@@ -31,13 +31,13 @@ $julia: "JuliaMono-Regular", monospace;
   }
 }
 
-@mixin tablet_min_height {
+@mixin tablet_min_height-small {
   @media screen and (min-height: 850px) {
     @content;
   }
 }
 
-@mixin tablet_min_height-bis {
+@mixin tablet_min_height-large {
   @media screen and (min-height: 900px) and (max-width: 900px) {
     @content;
   }
@@ -78,7 +78,7 @@ a {
   @include tablet_min_width {
     margin: 2% 25% 5% 25%;
   }
-  @include tablet_min_height-bis {
+  @include tablet_min_height-large {
     margin-top: 15%;
   }
 }
@@ -148,7 +148,7 @@ a {
 //----------------------------
 
 .main {
-  margin: 0.5rem 2rem 0.5rem 2rem;
+  margin: 0.5rem 1rem 0rem 1rem;
 }
 
 .main__title {
@@ -157,7 +157,7 @@ a {
 }
 
 .main__description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 //----------------------------
@@ -170,8 +170,8 @@ a {
 
 .links__link {
   list-style: none;
-  padding: 1rem 0.5rem;
-  margin: 0.5rem 1.5rem 1rem 1.5rem;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
   cursor: pointer;
   border: $border;
   box-shadow:
@@ -198,11 +198,12 @@ a {
 
 .link__title {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .link__description {
   margin: 0;
-  font-size: 0.8rem;
+  padding-top: 0.15rem;
+  font-size: 0.80rem;
 }
 
 //----------------------------
@@ -210,7 +211,7 @@ a {
 //----------------------------
 
 .navigation {
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
 }
 .navigation__icon {
   max-width: 24px;
@@ -232,7 +233,8 @@ a {
 .footer {
   border-top: $border;
   text-align: center;
-  @include tablet_min_height {
+  font-size: 0.8rem;
+  @include tablet_min_height-small {
     position: fixed;
     bottom: 0;
     width: 100%;
