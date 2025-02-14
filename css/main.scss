@@ -219,6 +219,7 @@ a {
 
 .navigation__link {
   padding: 0.7rem 0.2rem 0rem 0.2rem;
+  text-decoration: none;
   &:hover {
     outline: 2px dashed $highlight;
   }
