@@ -104,8 +104,9 @@ a {
   color: $white;
   border: $border;
   padding: 0.5rem 0.8rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   float: right;
+  min-width: 10rem;
   cursor: pointer;
   &:hover {
     color: $black;
